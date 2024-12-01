@@ -95,6 +95,16 @@
         </div>
     </div>
 
+    <div id="momenty-setrvacnosti">
+        <h2>Momenty setrvačnosti</h2>
+        <div class="equation" id="math-Iz">
+            \(I_{z} = \dfrac{b^3 \cdot h}{12}\)
+        </div>
+        <div class="equation" id="math-Iy">
+            \(I_{y} = \dfrac{b \cdot h^3}{12}\)
+        </div>
+    </div>
+
     <div id="kriticka-zatizeni">
         <h2>Kritická zatížení</h2>
         <p>Kritické zatížení při vybočení ve směru osy y - \(F_{k,z}\):</p>
@@ -150,6 +160,12 @@
 
             const Lvz_y_equation = document.getElementById('math-Lvz_y');
             Lvz_y_equation.innerHTML = `\\(L_{vz,y} = \\dfrac{L}{2} = ${Lvz_y}\\ m\\)`;
+
+            const Iz_equation = document.getElementById('math-Iz');
+            Iz_equation.innerHTML = `\\(I_{z} = \\dfrac{b^3 \\cdot h}{12} = \\dfrac{${b}^3 \\cdot ${h}}{12} = ${Iz}\\ m\\)`;
+
+            const Iy_equation = document.getElementById('math-Iy');
+            Iy_equation.innerHTML = `\\(I_{y} = \\dfrac{b \\cdot h^3}{12} = \\dfrac{${b} \\cdot ${h}^3}{12} = ${Iy}\\ m\\)`;
 
             const Fk_z_equation = document.getElementById('math-Fk_z');
             Fk_z_equation.innerHTML = `\\(F_{k,z} = \\dfrac{EI_z\\ \\pi^2}{L_{vz,z}^2} = \\dfrac{${E}\\cdot 10^6 \\cdot ${Iz.toPrecision(3)} \\cdot \\pi^2}{${Lvz_z}^2} = ${Fk_z.toFixed(3)}\\ kN\\)`;
