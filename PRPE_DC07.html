@@ -97,9 +97,11 @@
 
     <div id="momenty-setrvacnosti">
         <h2>Momenty setrvačnosti</h2>
+        <p>Moment setrvačnosti \(I_z\):</p>
         <div class="equation" id="math-Iz">
             \(I_{z} = \dfrac{b^3 \cdot h}{12}\)
         </div>
+        <p>Moment setrvačnosti \(I_y\):</p>
         <div class="equation" id="math-Iy">
             \(I_{y} = \dfrac{b \cdot h^3}{12}\)
         </div>
@@ -162,10 +164,10 @@
             Lvz_y_equation.innerHTML = `\\(L_{vz,y} = \\dfrac{L}{2} = ${Lvz_y}\\ m\\)`;
 
             const Iz_equation = document.getElementById('math-Iz');
-            Iz_equation.innerHTML = `\\(I_{z} = \\dfrac{b^3 \\cdot h}{12} = \\dfrac{${b}^3 \\cdot ${h}}{12} = ${Iz}\\ m\\)`;
+            Iz_equation.innerHTML = `\\(I_{z} = \\dfrac{b^3 \\cdot h}{12} = \\dfrac{${b}^3 \\cdot ${h}}{12} = ${Iz.toPrecision(3)}\\ m^4\\)`;
 
             const Iy_equation = document.getElementById('math-Iy');
-            Iy_equation.innerHTML = `\\(I_{y} = \\dfrac{b \\cdot h^3}{12} = \\dfrac{${b} \\cdot ${h}^3}{12} = ${Iy}\\ m\\)`;
+            Iy_equation.innerHTML = `\\(I_{y} = \\dfrac{b \\cdot h^3}{12} = \\dfrac{${b} \\cdot ${h}^3}{12} = ${Iy.toPrecision(3)}\\ m^4\\)`;
 
             const Fk_z_equation = document.getElementById('math-Fk_z');
             Fk_z_equation.innerHTML = `\\(F_{k,z} = \\dfrac{EI_z\\ \\pi^2}{L_{vz,z}^2} = \\dfrac{${E}\\cdot 10^6 \\cdot ${Iz.toPrecision(3)} \\cdot \\pi^2}{${Lvz_z}^2} = ${Fk_z.toFixed(3)}\\ kN\\)`;
